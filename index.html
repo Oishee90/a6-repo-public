@@ -73,8 +73,8 @@
               <h1 class="font-mulish text-3xl md:text-6xl lg:text-6xl font-black text-white mb-4 "> Welcome to the <br><span class="text-[#797DFC] ">VinTage</span> Forum</h1>
               <p class="font-mulish text-base md:text-xl lg:text-xl text-[#FFFFFFCC] font-medium mb-4 ">Vintage Forum Your gateway to <br> nostalgia and community.</p>
               <label class="input input-bordered pr-2 flex items-center gap-2 rounded-full mb-4 ">
-                <input type="text" class="grow w-full md:w-auto rounded-full border border-[#FFFFFF]" placeholder=" Search here anything" />
-                <a class="btn  bg-[#797DFC] px-4 md:pl-6 md:pr-6 lg:pl-6 lg:pr-6 rounded-full  font-mulish text-base lg:text-xl text-[#FFFFFF]">Search</a></div>
+                <input id="search-field" type="text" class="grow w-full md:w-auto rounded-full border border-[#FFFFFF]" placeholder=" Search here anything" />
+                <button onclick="handleSearch()"><a class=" bg-[#797DFC] px-4 md:pl-6 md:pr-6 lg:pl-6 lg:pr-6 rounded-full  font-mulish text-base lg:text-xl text-[#FFFFFF]">Search</a></button></div>
             
               </label>
                
@@ -119,77 +119,12 @@
       <!-- let's discuss section -->
       <div id="lets-discuss-section" class=" flex flex-col gap-5 lg:flex-row md:flex-row">
         <!-- left side -->
-        <div class="grid grid-cols-1 gap-5">
-        <div class="rounded-lg bg-violet-100">
+        <div id="lets-discuss" class="grid grid-cols-1 gap-5">
+        
 
-        <div class="flex flex-col md:flex-row lg:flex-row gap-5 p-8">
-          <!-- active section -->
-          <div>
-          <div class="avatar relative ">
-            <div class="w-20 h-20 rounded-2xl bg-slate-400  ">
-             <img src="" alt="">
-              <div class="absolute top-[-5px] right-[-5px]">
-              <div class="badge badge-success border-white border-solid border-2 badge-md"></div> </div>
-            </div>
-          </div>
-        </div>
-          <!-- tittle section  -->
-          <div class="flex  flex-col">
-            <div class="flex flex-row gap-5 mb-3 font-inter text-sm font-medium text-[#12132D80]"><p>#Music</p><p> Author : Awlad Hossain</p></div>
-            <div class="mb-3 font-mulish text-base lg:text-xl font-bold text-[#12132D]"><h1>10 Kids Unaware of Their Halloween Costume</h1></div>
-            <div class="mb-3 font-inter text-[#12132D99] text-base "><p>It’s one thing to subject yourself to ha Halloween costume mishap because, hey that’s your prerogative</p></div>
-            <hr class="h-0 border-dashed bg-violet-400">
-            <div class="flex flex-row justify-between gap-4 lg:items-center mt-3">
-              <div class="flex flex-row gap-6 pr-4 items-center ">
-                <div class="flex flex-row gap-2"><img src="images/massage.svg" alt=""> <p>560</p></div>
-                <div class="flex flex-row gap-2"><img src="images/eye.svg" alt=""> <p>1,568</p></div>
-                <div class="flex flex-row gap-2 "><img src="images/time.svg" alt=""> <p>5<span>min</span></p></div>
-              </div>
-
-              <div><button><img src="images/btn-msg.svg" alt="" srcset=""></button></div>
-
-
-            </div>
-          </div>
-          <!-- tittle sectio end -->
-          </div>
-        </div>
-        <!-- left-card-1 end -->
-         <div class="rounded-lg bg-violet-100">
-
-        <div class="flex flex-col md:flex-row lg:flex-row gap-5 p-8">
-          <!-- active section -->
-          <div>
-          <div class="avatar relative ">
-            <div class="w-20 h-20 rounded-2xl bg-slate-400  ">
-              <img src="" alt="">
-              <div class="absolute top-[-5px] right-[-5px]">
-              <div class="badge badge-success border-white border-solid border-2 badge-md"></div> </div>
-            </div>
-          </div>
-        </div>
-          <!-- tittle section  -->
-          <div class="flex  flex-col">
-            <div class="flex flex-row gap-5 mb-3 font-inter text-sm font-medium text-[#12132D80]"><p>#Music</p><p> Author : Awlad Hossain</p></div>
-            <div class="mb-3 font-mulish text-base lg:text-xl font-bold text-[#12132D]"><h1>10 Kids Unaware of Their Halloween Costume</h1></div>
-            <div class="mb-3 font-inter text-[#12132D99] text-base "><p>It’s one thing to subject yourself to ha Halloween costume mishap because, hey that’s your prerogative</p></div>
-            <hr class="h-0 border-dashed bg-violet-400">
-            <div class="flex flex-row justify-between gap-4 lg:items-center mt-3">
-              <div class="flex flex-row gap-6 pr-4 items-center ">
-                <div class="flex flex-row gap-2"><img src="images/massage.svg" alt=""> <p>560</p></div>
-                <div class="flex flex-row gap-2"><img src="images/eye.svg" alt=""> <p>1,568</p></div>
-                <div class="flex flex-row gap-2 "><img src="images/time.svg" alt=""> <p>5<span>min</span></p></div>
-              </div>
-
-              <div><button><img src="images/btn-msg.svg" alt="" srcset=""></button></div>
-
-
-            </div>
-          </div>
-          <!-- tittle sectio end -->
-          </div>
-        </div>
-         <!-- left-card-2 end -->
+      
+       
+       
       </div>
         <!-- left side end -->
         <!-- right side -->
@@ -243,83 +178,12 @@
         <h1 class="text-4xl font-black font-mulish text-[#12132D]">Latest Posts</h1>
         <p class="font-inter text-xl text-[#12132D99]">Join us now to be at the forefront of the latest trends and discussions across a wide range of topics. <br> The integrated testing features allow for a streamlined .</p>
       </div>
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-5">
+      <div id="latest-section" class="grid grid-cols-1 lg:grid-cols-3 gap-5">
         <!-- 1st grid -->
-        <div class="card  bg-base-100 shadow-xl border border-gray-400 rounded-3xl">
-          <figure class="px-10 pt-10">
-            <img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" class="rounded-xl" />
-          </figure>
-          <div class="card-body">
-            <div class="flex flex-row gap-2"><img src="images/date.svg" alt=""> <p class="font-mulish text-[#12132D99] mb-2">29 January 2024</p></div>
-            <p class="font-mulish text-[#12132D] font-extrabold mb-2">What will a mars habitat force that impact in our daily life!!!</p>
-            <p class="font-mulish text-[#12132D99] mb-2">Yes, you can run unit tests and view the results directly within the app.</p>
-            <div class="flex flex-row gap-5 items-center">
-              <!-- avatar name -->
-              <div class="avatar">
-                <div class="w-12 h-12 rounded-full">
-                  <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-                </div>
-              </div>
-              <!-- avatar details -->
-              <div class="flex flex-col ">
-              <h1 class="text-[#12132D] font-mulish font-bold text-lg">Cameron Williamson</h1>
-              <p class="font-mulish text-[#12132D99]">Unknown</p>
-              </div>
-                <!-- avatar details End-->
-            </div>
-          </div>
-        </div>
-        <!-- 2nd grid -->
-        <div class="card  bg-base-100 shadow-xl border border-gray-400 rounded-3xl">
-          <figure class="px-10 pt-10">
-            <img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" class="rounded-xl" />
-          </figure>
-          <div class="card-body">
-            <div class="flex flex-row gap-2"><img src="images/date.svg" alt=""> <p class="font-mulish text-[#12132D99] mb-2">29 January 2024</p></div>
-            <p class="font-mulish text-[#12132D] font-extrabold mb-2">What will a mars habitat force that impact in our daily life!!!</p>
-            <p class="font-mulish text-[#12132D99] mb-2">Yes, you can run unit tests and view the results directly within the app.</p>
-            <div class="flex flex-row gap-5 items-center">
-              <!-- avatar name -->
-              <div class="avatar">
-                <div class="w-12 h-12 rounded-full">
-                  <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-                </div>
-              </div>
-              <!-- avatar details -->
-              <div class="flex flex-col ">
-              <h1 class="text-[#12132D] font-mulish font-bold text-lg">Cameron Williamson</h1>
-              <p class="font-mulish text-[#12132D99]">Unknown</p>
-              </div>
-                <!-- avatar details End-->
-            </div>
-          </div>
-        </div>
-        <!-- 3rd grid -->
-        <div class="card  bg-base-100 shadow-xl border border-gray-400 rounded-3xl">
-          <figure class="px-10 pt-10">
-            <img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" class="rounded-xl" />
-          </figure>
-          <div class="card-body">
-            <div class="flex flex-row gap-2"><img src="images/date.svg" alt=""> <p class="font-mulish text-[#12132D99] mb-2">29 January 2024</p></div>
-            <p class="font-mulish text-[#12132D] font-extrabold mb-2">What will a mars habitat force that impact in our daily life!!!</p>
-            <p class="font-mulish text-[#12132D99] mb-2">Yes, you can run unit tests and view the results directly within the app.</p>
-            <div class="flex flex-row gap-5 items-center">
-              <!-- avatar name -->
-              <div class="avatar">
-                <div class="w-12 h-12 rounded-full">
-                  <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-                </div>
-              </div>
-              <!-- avatar details -->
-              <div class="flex flex-col ">
-              <h1 class="text-[#12132D] font-mulish font-bold text-lg">Cameron Williamson</h1>
-              <p class="font-mulish text-[#12132D99]">Unknown</p>
-              </div>
-                <!-- avatar details End-->
-            </div>
-          </div>
-        </div>
-        <!-- 3rd grid end -->
+       
+       
+       
+       
       </div>
      </section>
    </main>

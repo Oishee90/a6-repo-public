@@ -73,7 +73,7 @@ const displayLatest = data => {
         <img src="${card.cover_image}" alt="Shoes" class="rounded-xl" />
       </figure>
       <div class="card-body">
-        <div class="flex flex-row gap-2"><img src="images/date.svg" alt=""> <p class="font-mulish text-[#12132D99] mb-2">29 January 2024</p></div>
+        <div class="flex flex-row gap-2"><img src="images/date.svg" alt=""> <p class="font-mulish text-[#12132D99] mb-2">${card.author.posted_date ? card.author.posted_date : 'No publish date'}</p></div>
         <p class="font-mulish text-[#12132D] font-extrabold mb-2">${card.title}</p>
         <p class="font-mulish text-[#12132D99] mb-2">${card.description}</p>
         <div class="flex flex-row gap-5 items-center">
@@ -86,7 +86,7 @@ const displayLatest = data => {
           <!-- avatar details -->
           <div class="flex flex-col ">
           <h1 class="text-[#12132D] font-mulish font-bold text-lg">${card.author.name}</h1>
-          <p class="font-mulish text-[#12132D99]">Unknown</p>
+          <p class="font-mulish text-[#12132D99]">${card.author.designation ? card.author.designation : 'unknown'}</p>
           </div>
             <!-- avatar details End-->
         </div>

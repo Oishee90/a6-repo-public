@@ -115,9 +115,11 @@
         <h1 class="text-4xl font-black font-mulish text-[#12132D]">Let’s Discuss</h1>
         <p class="font-inter text-xl text-[#12132D99]">Yes, you can run unit tests and view the results directly within the app. <br> The integrated testing features allow for a streamlined .</p>
       </div>
+      <div class="text-center hidden"><span class="loading loading-spinner loading-lg"></span></div>
       <!-- let's discuss section -->
       <div id="lets-discuss-section" class=" flex flex-col gap-5 lg:flex-row md:flex-row">
         <!-- left side -->
+        <div class="grid grid-cols-1 gap-5">
         <div class="rounded-lg bg-violet-100">
 
         <div class="flex flex-col md:flex-row lg:flex-row gap-5 p-8">
@@ -125,7 +127,7 @@
           <div>
           <div class="avatar relative ">
             <div class="w-20 h-20 rounded-2xl bg-slate-400  ">
-             
+             <img src="" alt="">
               <div class="absolute top-[-5px] right-[-5px]">
               <div class="badge badge-success border-white border-solid border-2 badge-md"></div> </div>
             </div>
@@ -152,6 +154,43 @@
           <!-- tittle sectio end -->
           </div>
         </div>
+        <!-- left-card-1 end -->
+         <div class="rounded-lg bg-violet-100">
+
+        <div class="flex flex-col md:flex-row lg:flex-row gap-5 p-8">
+          <!-- active section -->
+          <div>
+          <div class="avatar relative ">
+            <div class="w-20 h-20 rounded-2xl bg-slate-400  ">
+              <img src="" alt="">
+              <div class="absolute top-[-5px] right-[-5px]">
+              <div class="badge badge-success border-white border-solid border-2 badge-md"></div> </div>
+            </div>
+          </div>
+        </div>
+          <!-- tittle section  -->
+          <div class="flex  flex-col">
+            <div class="flex flex-row gap-5 mb-3 font-inter text-sm font-medium text-[#12132D80]"><p>#Music</p><p> Author : Awlad Hossain</p></div>
+            <div class="mb-3 font-mulish text-base lg:text-xl font-bold text-[#12132D]"><h1>10 Kids Unaware of Their Halloween Costume</h1></div>
+            <div class="mb-3 font-inter text-[#12132D99] text-base "><p>It’s one thing to subject yourself to ha Halloween costume mishap because, hey that’s your prerogative</p></div>
+            <hr class="h-0 border-dashed bg-violet-400">
+            <div class="flex flex-row justify-between gap-4 lg:items-center mt-3">
+              <div class="flex flex-row gap-6 pr-4 items-center ">
+                <div class="flex flex-row gap-2"><img src="images/massage.svg" alt=""> <p>560</p></div>
+                <div class="flex flex-row gap-2"><img src="images/eye.svg" alt=""> <p>1,568</p></div>
+                <div class="flex flex-row gap-2 "><img src="images/time.svg" alt=""> <p>5<span>min</span></p></div>
+              </div>
+
+              <div><button><img src="images/btn-msg.svg" alt="" srcset=""></button></div>
+
+
+            </div>
+          </div>
+          <!-- tittle sectio end -->
+          </div>
+        </div>
+         <!-- left-card-2 end -->
+      </div>
         <!-- left side end -->
         <!-- right side -->
         <div class="card  bg-gray-400 shadow-xl">
@@ -176,7 +215,7 @@
      <section class="banner mt-12 mx-4">
       <div class="container mx-auto ">
       <div class="hero  bg-[#12132D]  bg-cover bg-no-repeat rounded-3xl">
-        <div class=" flex flex-col md:flex-col lg:flex-row justify-around gap-6 w-full p-20">
+        <div class=" flex flex-col-reverse md:flex-col-reverse lg:flex-row justify-around gap-6 w-full p-20">
           <div>
             <!-- tittle and input -->
             <div class="flex flex-col justify-start space-y-5">
@@ -285,25 +324,27 @@
      </section>
    </main>
    <footer class="mt-10">
-    <footer class="footer footer-center p-10 bg-base-200 text-base-content rounded">
-      <nav >
-        <h1 class="font-mulish font-black text-[#12132D] text-2xl lg:text-4xl mt-4 mb-4">VinTage</h1>
-        <p class="space-y-3 text-base font-mulish text-[#12132D99]">Stay connected with VinTage Forum on our social media platforms! <br>
-          Follow us on Facebook, Twitter, and Instagram to stay updated on the latest discussions, vintage finds, and community events.</p>
-       
-      </nav> 
-      <nav>
-        <div class="grid grid-flow-col gap-4">
-          <a href=""><img src="images/github.png" class="w-full h-full" alt=""></a>
-          <a href=""></a>
-          <a href=""></a>
-        </div>
-      </nav> 
-      <aside>
-        <p>Copyright © 2024 - All right reserved by ACME Industries Ltd</p>
-      </aside>
+    <footer class="footer footer-center p-10 bg-base-200 text-base-content rounded ">
+        <nav>
+            <h1 class="font-mulish font-black text-[#12132D] text-2xl lg:text-4xl mt-4 mb-4">VinTage</h1>
+            <p class="space-y-3 text-base font-mulish text-[#12132D99]">Stay connected with VinTage Forum on our social media platforms! <br>
+                Follow us on Facebook, Twitter, and Instagram to stay updated on the latest discussions, vintage finds, and community events.</p>
+        </nav>
+        <nav>
+            <div class="grid grid-flow-col gap-6 justify-center items-center">
+                <div class="w-[100%] h-[100%]"><a href="https://twitter.com/?lang=en"><img src="images/twitter.png" class="w-full" alt=""></a></div>
+                <div class="w-[100%] h-[100%]"><a href="https://www.facebook.com/"><img src="images/facebook.png" class="w-full" alt=""></a></div>
+                <div class="w-[100%] h-[100%]"><a href="https://www.instagram.com/"><img src="images/instra.png" class="w-full" alt=""></a></div>
+                <div class="w-[100%] h-[100%]"><a href="https://github.com/"><img src="images/github.png" class="w-full" alt=""></a></div>
+            </div>
+        </nav>
+        <div class="border border-dotted border-gray-400 h-0 w-full"></div>
+        <aside>
+            <p class="text-lg font-mulish text-[#12132D99]">2024, All Rights Reserved.</p>
+        </aside>
     </footer>
-   </footer>
+</footer>
+
 
 
     <script src="js/script.js"></script>

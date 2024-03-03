@@ -52,9 +52,13 @@ const displayPost = post => {;
         <!-- tittle sectio end -->
         </div>`;
         postContainer.appendChild(postCard);
+        setTimeout(() => {
+            toogleLoading(false)
+        }, 2000);
+       
+        
     })
-
-   
+    
 }
 const latestData = async () => {
     const res = await fetch(` https://openapi.programming-hero.com/api/retro-forum/latest-posts`);
@@ -92,21 +96,45 @@ const displayLatest = data => {
         </div>
       </div>
         `;
-        latestContainer.appendChild(latestCard)
+        latestContainer.appendChild(latestCard);
+        setTimeout(() => {
+            toogleLoading2(false)
+        }, 2000);
     
     })
     
 }
 const handleSearch = ()=>{
+    toogleLoading(true);
     const searchField = document.getElementById('search-field');
     const searchText = searchField.value;
     console.log(searchText);
     loadPost(searchText);
 }
 
-
+const toogleLoading = (isLoading) => {
+    const loadingSpinner = document.getElementById('loading-spiner');
+    if(isLoading){
+        loadingSpinner.classList.remove('hidden')
+    }
+    else{
+        loadingSpinner.classList.add('hidden')
+    }
+}
+const toogleLoading2 = (isLoading) => {
+    const loadingSpinner = document.getElementById('loading-spiner2');
+    if(isLoading){
+        loadingSpinner.classList.remove('hidden')
+    }
+    else{
+        loadingSpinner.classList.add('hidden')
+    }
+}
 
 window.addEventListener('DOMContentLoaded', function() {
+    toogleLoading(true);
     fetchData();
+    toogleLoading2(true);
+    latestData();
   });
-  latestData()
+  

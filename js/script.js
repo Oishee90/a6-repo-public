@@ -3,12 +3,14 @@ const fetchData = async () => {
     const data = await res.json();
     const post = data.posts;
     displayPost(post);
+   
 }
 const loadPost = async (categoryName) => {
     const res = await fetch(`https://openapi.programming-hero.com/api/retro-forum/posts?category=${categoryName}`);
     const data = await res.json();
     const post = data.posts;
     displayPost(post);
+  
 }
 
 const displayPost = post => {;
@@ -40,11 +42,11 @@ const displayPost = post => {;
           <div class="flex flex-row justify-between gap-4 lg:items-center mt-3">
             <div class="flex flex-row gap-6 pr-4 items-center ">
               <div class="flex flex-row gap-2"><img src="images/massage.svg" alt=""> <p>${item.comment_count}</p></div>
-              <div class="flex flex-row gap-2"><img src="images/eye.svg" alt=""> <p>${item.comment_count}</p></div>
+              <div class="flex flex-row gap-2"><img src="images/eye.svg" alt=""> <p>${item.view_count}</p></div>
               <div class="flex flex-row gap-2 "><img src="images/time.svg" alt=""> <p>${item.posted_time}<span>min</span></p></div>
             </div>
 
-            <div><button><img src="images/btn-msg.svg" alt="" srcset=""></button></div>
+            <div><button onclick="render('${item.title}', '${item.view_count}')"><img src="images/btn-msg.svg" alt="" srcset=""></button></div>
 
 
           </div>
@@ -137,4 +139,51 @@ window.addEventListener('DOMContentLoaded', function() {
     toogleLoading2(true);
     latestData();
   });
-  
+
+
+let count = 0;
+const titles = []; 
+const views = [];
+
+const render = async (title, view) => {
+    try {
+        count++;
+        const btnField = document.getElementById('mark-read');
+        btnField.innerText = count;
+
+        
+        const res = await fetch(`https://openapi.programming-hero.com/api/retro-forum/posts?title=${title}&view_count=${view}`);
+        const data = await res.json();
+        const posts = data.posts;
+
+        if (count  > 0) {
+           
+            
+            for (const post of posts) {
+               
+                const title = post.title;
+                const view = post.viewCount;
+                views.push(view)
+                titles.push(title); 
+            }
+           const textContainer = document.getElementById('title-card')
+           const textdiv = document.createElement('div');
+           textdiv.classList = `card bg-base-100 shadow-xl p-6`
+           textdiv.innerHTML =`
+           <div class= "p-4">
+           <div class = "flex gap-8">
+           <div><h1>${title}</h1></div>
+           <div><img src = "images/eye.svg" alt =" " srcset=""><h1>${view}</h1></div>
+           </div>
+           </div>
+           `;
+           textContainer.appendChild(textdiv)
+        } else {
+            console.error('No posts found');
+        }
+    } catch (error) {
+        console.error('Error:', error);
+    }
+}
+
+

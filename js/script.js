@@ -73,7 +73,7 @@ const displayLatest = data => {
     const latestContainer = document.getElementById('latest-section')
     data.forEach(card => {
        
-        console.log(card);
+        // console.log(card);
         const latestCard = document.createElement('div');
         latestCard.classList=`card  bg-base-100 shadow-xl border border-gray-400 rounded-3xl`;
         latestCard.innerHTML = `
@@ -113,7 +113,7 @@ const handleSearch = ()=>{
     toogleLoading(true);
     const searchField = document.getElementById('search-field');
     const searchText = searchField.value;
-    console.log(searchText);
+    // console.log(searchText);
     loadPost(searchText);
 }
 
@@ -175,7 +175,7 @@ const render = async (title, view) => {
            textdiv.innerHTML =`
            <div class= "p-4">
            <div class = "flex gap-8">
-           <div class="font-mulish text-[#12132D] text-base font bold"><h1>${title}</h1></div>
+           <div class="font-mulish text-[#12132D] text-base font-bold"><h1>${title}</h1></div>
            <div class ="flex justify-center items-center"><img src = "images/eye.svg" alt =" " srcset=""><h1>${view}</h1></div>
            </div>
            </div>

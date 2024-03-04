@@ -53,10 +53,12 @@ const displayPost = post => {;
         </div>
         <!-- tittle sectio end -->
         </div>`;
-        postContainer.appendChild(postCard);
         setTimeout(() => {
-            toogleLoading(false)
-        }, 2000);
+          toogleLoading(false)
+          postContainer.appendChild(postCard);
+      }, 2000);
+        
+        
        
         
     })
@@ -98,9 +100,10 @@ const displayLatest = data => {
         </div>
       </div>
         `;
-        latestContainer.appendChild(latestCard);
+       
         setTimeout(() => {
             toogleLoading2(false)
+            latestContainer.appendChild(latestCard);
         }, 2000);
     
     })

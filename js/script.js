@@ -46,7 +46,7 @@ const displayPost = post => {;
               <div class="flex flex-row gap-2 "><img src="images/time.svg" alt=""> <p>${item.posted_time}<span>min</span></p></div>
             </div>
 
-            <div><button onclick="render('${item.title}', '${item.view_count}')"><img src="images/btn-msg.svg" alt="" srcset=""></button></div>
+            <div><button onclick="render('${item.title.replace("'"," ")}', '${item.view_count}')"><img src="images/btn-msg.svg" alt="" srcset=""></button></div>
 
 
           </div>
@@ -172,8 +172,8 @@ const render = async (title, view) => {
            textdiv.innerHTML =`
            <div class= "p-4">
            <div class = "flex gap-8">
-           <div><h1>${title}</h1></div>
-           <div><img src = "images/eye.svg" alt =" " srcset=""><h1>${view}</h1></div>
+           <div class="font-mulish text-[#12132D] text-base font bold"><h1>${title}</h1></div>
+           <div class ="flex justify-center items-center"><img src = "images/eye.svg" alt =" " srcset=""><h1>${view}</h1></div>
            </div>
            </div>
            `;
